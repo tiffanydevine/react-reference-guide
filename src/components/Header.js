@@ -1,12 +1,14 @@
 import React from "react"; 
+import Title from "./Header/Title"
 
-export default class Title extends React.Component {
+export default class Header extends React.Component {
+ 
   constructor(){
     super(); 
     this.title = "React Resources"
   }
 
   render() {
-    return <h1>{this.title}</h1>;
+    return <Title />;
   }
 }

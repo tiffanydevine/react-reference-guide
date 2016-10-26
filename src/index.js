@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Title from './components/Title.js';
+import Layout from './components/Layout';
 import './index.css';
 
 ReactDOM.render(
-  <Title />,
+  <Layout />,
   document.getElementById('root')
 );
