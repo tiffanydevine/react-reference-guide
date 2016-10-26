@@ -18,4 +18,25 @@ class App extends Component {
   }
 }
 
-export default App;
+
+class Title extends Component {
+  constructor(){
+    super(); 
+    this.title = "React Resources"
+  }
+
+  render() {
+    return <h1>{this.title}</h1>;
+  }
+}
+
+/*
+class ClassWeek extends Component {
+  render(){
+    return (
+      )
+  }
+
+}
+*/
+export default Title; 
