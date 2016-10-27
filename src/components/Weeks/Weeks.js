@@ -6,7 +6,7 @@ export default class Weeks extends React.Component {
   render() {
   	//console.log(this.props.weekItems.links)
     return 	(<li>
-    	   		<h3>Week {this.props.weekItems.num}</h3>
+    	   		<h3>Week {this.props.weekItems.num}: {this.props.weekItems.topic} </h3>
     	   			<ul>{
     	   				this.props.weekItems.links.map(function(item, i){
     	   					console.log(item)
