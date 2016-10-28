@@ -1,6 +1,7 @@
 import React from "react"; 
 import Header from './Header';
 import WeekList from './Weeks/WeekList'
+import SearchBar from './SearchBar'
 
 export default class Layout extends React.Component {
     constructor(){
@@ -122,6 +123,7 @@ render() {
 
     	<div>
     		<Header />
+            <SearchBar />
     		<WeekList title="Week1" details={this.state.week1}/>
             <WeekList title="Week2" details={this.state.week2}/>
             <WeekList title="Week3" details={this.state.week3}/>
