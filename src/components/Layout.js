@@ -117,15 +117,14 @@ export default class Layout extends React.Component {
 
 
 render() {
-    // console.log(this.state.week1)
 
     return (
 
     	<div>
     		<Header />
-    		<WeekList title="" details={this.state.week1}/>
-            <WeekList title="" details={this.state.week2}/>
-            <WeekList title="" details={this.state.week3}/>
+    		<WeekList title="Week1" details={this.state.week1}/>
+            <WeekList title="Week2" details={this.state.week2}/>
+            <WeekList title="Week3" details={this.state.week3}/>
     	</div>
     )
   }
