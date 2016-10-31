@@ -115,23 +115,23 @@ export default class Layout extends React.Component {
               ], 
               week4:[
                 {
-                  titel: 'React Docs: Handling Events', 
+                  title: 'React Docs: Handling Events', 
                   link: 'https://facebook.github.io/react/docs/handling-events.html'
                 },
                 {
-                  titel: 'React Stateless Functional Components: Nine Wins You Might Have Overlooked', 
+                  title: 'React Stateless Functional Components: Nine Wins You Might Have Overlooked', 
                   link: 'https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.rkhq5wos6'
                 },
                 {
-                  titel: 'Events & ReactJS', 
+                  title: 'Events & ReactJS', 
                   link: 'https://www.youtube.com/watch?v=OcM__8q6p4c&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=8'
                 },
                 {
-                  titel: 'State of Components', 
+                  title: 'State of Components', 
                   link: 'https://www.youtube.com/watch?v=e5n9j9n83OM&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=9'
                 },
                 {
-                  titel: 'How does ReactJS update the DOM?', 
+                  title: 'How does ReactJS update the DOM?', 
                   link: 'https://www.youtube.com/watch?v=Iw2BLUjQo1E&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=10'
                 }
               ],
@@ -149,7 +149,7 @@ render() {
     		    <WeekList title="Week 1: Introductions to ES6 and JS assesment" details={this.state.week1}/>
             <WeekList title="Week 2: ES6 Core Features" details={this.state.week2}/>
             <WeekList title="Week 3: Thinking in Reactjs" details={this.state.week3}/>
-            <WeekList title="Week 4: State and Events in Reactjs" details={this.state.week3}/>
+            <WeekList title="Week 4: State and Events in Reactjs" details={this.state.week4}/>
 
     	</div>
     )
