@@ -4,20 +4,21 @@ import Weeks from "./Weeks"
 export default class WeekList extends React.Component {
 
   handleButton(e){
-    this.props.doneFunc(); 
+    const theWeek = this.props.details
+    this.props.doneFunc(theWeek); 
   }
 
   render() {
-    console.log(this.props.done)
+    //console.log(this.props.details)
 
     return (
       
       <ul>
-        <h2>{this.props.title}</h2>
+        <h2>{this.props.details.weektitle}</h2>
         <button onClick={this.handleButton.bind(this)}>Make Change</button>
-        <p>{this.props.done}</p>
+        <p>{this.props.details.done}</p>
         {
-          this.props.details.map(function (item, i) {
+          this.props.details.links.map(function (item, i) {
             return (
                 <Weeks  key={i} weekItems={item}/>
               )
