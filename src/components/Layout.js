@@ -145,7 +145,7 @@ render() {
 
     	<div>
     		<Header />
-            <SearchBar />
+            
     		    <WeekList title="Week 1: Introductions to ES6 and JS assesment" details={this.state.week1}/>
             <WeekList title="Week 2: ES6 Core Features" details={this.state.week2}/>
             <WeekList title="Week 3: Thinking in Reactjs" details={this.state.week3}/>
