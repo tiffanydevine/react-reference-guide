@@ -7,6 +7,8 @@ export default class Layout extends React.Component {
     constructor(){
         super(); 
             this.state = {
+              weektitle: "Week 1: Introductions to ES6 and JS assesment" , 
+              done: '',
               week1: [
                 {
                   title: 'JavaScript Assessment',
@@ -49,6 +51,8 @@ export default class Layout extends React.Component {
                   link: 'https://www.youtube.com/watch?v=AfWYO8t7ed4',
                 },
               ],
+              weektitle: "Week 2: ES6 Core Features", 
+              done: '',
               week2: [
                 {
                   title: 'AirBnb Styleguide',
@@ -75,6 +79,8 @@ export default class Layout extends React.Component {
                   link: '',
                 },
               ],
+              weektitle:'Week 3: Thinking in Reactjs', 
+              done: '',
               week3: [
                 {
                   title: 'Thinking in React',
@@ -113,6 +119,8 @@ export default class Layout extends React.Component {
                   link: 'https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi',
                 },
               ], 
+              weektitle:'Week 4: State and Events in Reactjs', 
+              done: '',
               week4:[
                 {
                   title: 'React Docs: Handling Events', 
@@ -134,27 +142,29 @@ export default class Layout extends React.Component {
                   title: 'How does ReactJS update the DOM?', 
                   link: 'https://www.youtube.com/watch?v=Iw2BLUjQo1E&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=10'
                 }
-              ],
+              ]
             }
-            }
+          }
 
+    doneFunc(e){
+      this.setState({done: 'FINISHED'})
+    }
 
-render() {
+    render() {
 
-    return (
+        return (
 
-    	<div>
-    		<Header />
-            
-    		    <WeekList title="Week 1: Introductions to ES6 and JS assesment" details={this.state.week1}/>
-            <WeekList title="Week 2: ES6 Core Features" details={this.state.week2}/>
-            <WeekList title="Week 3: Thinking in Reactjs" details={this.state.week3}/>
-            <WeekList title="Week 4: State and Events in Reactjs" details={this.state.week4}/>
-
-    	</div>
-    )
-  }
+        	<div>
+        		<Header />    
+        		    <WeekList title={this.state.weektitle} details={this.state.week1} done={this.state.done} doneFunc={this.doneFunc.bind(this)}/>
+                <WeekList title={this.state.weektitle} details={this.state.week2} done={this.state.done} doneFunc={this.doneFunc.bind(this)}/>
+                <WeekList title={this.state.weektitle} details={this.state.week3} done={this.state.done} doneFunc={this.doneFunc.bind(this)}/>
+                <WeekList title={this.state.weektitle} details={this.state.week4} done={this.state.done} doneFunc={this.doneFunc.bind(this)}/>
+        	</div>
+          )
+    }
 }
+    
 
 /*
 const weekDetails = [

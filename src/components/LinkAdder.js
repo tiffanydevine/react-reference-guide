@@ -14,3 +14,8 @@ const LinkAdder = ({link}) => {
 
 }
 */
+
+// need to access input in properties (consturctor)
+// need to write a function that appends this info to our object?  
+// need to have a click handler that ties executes the funciton 
+
