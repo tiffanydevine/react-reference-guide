@@ -14,7 +14,7 @@ export default class WeekList extends React.Component {
     return (
       
       <ul>
-        <h2>{this.props.details.weektitle}</h2>
+        <h3>{this.props.details.weektitle}</h3>
         <button onClick={this.handleButton.bind(this)}>Completed</button>
         <p>{this.props.details.done}</p>
         {

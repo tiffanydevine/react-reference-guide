@@ -164,7 +164,7 @@ export default class Layout extends React.Component {
       // now its a string but i can bracket the string in order to use it in object access. 
       // Therefore this.state."weekNum1" becomes this.state.weekNum1 !!
       // Next I change temp.done but left everything else about temp alone. 
-      // Then for setState , I took the entire weekNum1 object and set it equal to temp. 
+      // Then for setState , I took the entire weekNum1 object and set it equal to temp.
       const temp = this.state[weekID]; 
       temp.done = "Week completed"
       this.setState({[weekID]: temp})
@@ -175,11 +175,12 @@ export default class Layout extends React.Component {
         return (
 
         	<div>
-        		<Header />    
-        		    <WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)}/>
-                <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)}/>
-                <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)}/>
-                <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)}/>
+
+            <Header />
+        		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)}/>
+            <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)}/>
+            <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)}/>
+            <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)}/>
         	</div>
           )
     }
