@@ -159,18 +159,15 @@ export default class Layout extends React.Component {
           }
 
     doneFunc(weekID){
+      // set temp equal to the the entire weekNum1 object 
+      // tricky part was how to access this object. I passed back weekID from my week component (will be specific to that instance of week)
+      // now its a string but i can bracket the string in order to use it in object access. 
+      // Therefore this.state."weekNum1" becomes this.state.weekNum1 !!
+      // Next I change temp.done but left everything else about temp alone. 
+      // Then for setState , I took the entire weekNum1 object and set it equal to temp. 
       const temp = this.state[weekID]; 
       temp.done = "Week completed"
       this.setState({[weekID]: temp})
-      
-      //console.log (xxx)
-      // myobj[Object.keys(myobj)[0]];
-      //const weekObj = this.state[Object.keys(this.state)[weekID]]
-      //console.log(weekObj)
-      //this.setState( {done: "Finished" }) 
-      //console.log(xxx)
-      //console.log(weekObj)
-      //console.log(weekObj)
     }
 
     render() {
