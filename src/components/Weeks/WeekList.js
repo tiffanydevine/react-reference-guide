@@ -4,8 +4,8 @@ import Weeks from "./Weeks"
 export default class WeekList extends React.Component {
 
   handleButton(e){
-    const theWeek = this.props.details
-    this.props.doneFunc(theWeek); 
+    const weekID = this.props.details.weekID
+    this.props.doneFunc(weekID); 
   }
 
   render() {

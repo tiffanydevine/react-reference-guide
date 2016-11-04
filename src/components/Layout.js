@@ -8,6 +8,7 @@ export default class Layout extends React.Component {
         super(); 
             this.state = {
               weekNum1: {
+                weekID: "weekNum1",
                 weektitle: "Week 1: Introductions to ES6 and JS assesment" , 
                 done: '',
                 links: [    
@@ -54,6 +55,7 @@ export default class Layout extends React.Component {
                 ]
               }, 
               weekNum2: {
+                weekID: "weekNum2",
                 weektitle: "Week 2: ES6 Core Features", 
                 done: '',
                 links: [
@@ -84,6 +86,7 @@ export default class Layout extends React.Component {
                 ]
               }, 
               weekNum3: {
+                weekID: "weekNum3",
                 weektitle:'Week 3: Thinking in Reactjs', 
                 done: '',
                 links: [  
@@ -126,6 +129,7 @@ export default class Layout extends React.Component {
                 ]
               }, 
               weekNum4: {
+                weekID: "weekNum4",
                 weektitle:'Week 4: State and Events in Reactjs', 
                 done: '',
                 links:[
@@ -154,9 +158,19 @@ export default class Layout extends React.Component {
             }
           }
 
-    doneFunc(theWeek){
-      this.setState({done: 'FINISHED'})
-      console.log(theWeek.done)
+    doneFunc(weekID){
+      const temp = this.state[weekID]; 
+      temp.done = "Week completed"
+      this.setState({[weekID]: temp})
+      
+      //console.log (xxx)
+      // myobj[Object.keys(myobj)[0]];
+      //const weekObj = this.state[Object.keys(this.state)[weekID]]
+      //console.log(weekObj)
+      //this.setState( {done: "Finished" }) 
+      //console.log(xxx)
+      //console.log(weekObj)
+      //console.log(weekObj)
     }
 
     render() {
