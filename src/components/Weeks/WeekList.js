@@ -15,7 +15,7 @@ export default class WeekList extends React.Component {
       
       <ul>
         <h2>{this.props.details.weektitle}</h2>
-        <button onClick={this.handleButton.bind(this)}>Make Change</button>
+        <button onClick={this.handleButton.bind(this)}>Completed</button>
         <p>{this.props.details.done}</p>
         {
           this.props.details.links.map(function (item, i) {
