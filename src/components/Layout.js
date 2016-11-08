@@ -173,14 +173,16 @@ export default class Layout extends React.Component {
 
         return (
 
-        	<div className="weekcontainer">
+        	<div className="container">
 
             <Header />
-        		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)}/>
-            <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)}/>
-            <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)}/>
-            <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)}/>
-        	</div>
+            <div className='thing'>
+          		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)}/>
+              <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)}/>
+              <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)}/>
+              <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)}/>
+        	 </div>
+          </div>
           )
     }
 }

@@ -18,19 +18,20 @@ export default class WeekList extends React.Component {
     //console.log(this.props.details)
 
     return (
-      
-      <ul>
-        <h3>{this.props.details.weektitle}</h3>
-        <button onClick={this.handleButton.bind(this)}>{this.state.completionStatus}</button>
-        <p>{this.props.details.done}</p>
-        {
-          this.props.details.links.map(function (item, i) {
-            return (
-                <Weeks  key={i} weekItems={item}/>
-              )
-          })
-        }
-      </ul>
+      <div className='col-sm-6'>
+        <ul>
+          <h3>{this.props.details.weektitle}</h3>
+          <button onClick={this.handleButton.bind(this)}>{this.state.completionStatus}</button>
+          <p>{this.props.details.done}</p>
+          {
+            this.props.details.links.map(function (item, i) {
+              return (
+                  <Weeks  key={i} weekItems={item}/>
+                )
+            })
+          } 
+       </ul>
+      </div>
     );
   }
 }; 
