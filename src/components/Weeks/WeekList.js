@@ -14,14 +14,20 @@ export default class WeekList extends React.Component {
     this.props.doneFunc(weekID); 
   }
 
+  inputChange(e) {
+        // Log new `value` to JavaScript console
+        console.log(e.target.value)
+  }
+
   render() {
     //console.log(this.props.details)
 
     return (
-      <div className='col-sm-6'>
+      <div>
         <ul>
           <h3>{this.props.details.weektitle}</h3>
-          <button onClick={this.handleButton.bind(this)}>{this.state.completionStatus}</button>
+          <input type='text' onChange={this.inputChange.bind(this)}/>
+          <button onClick={this.handleButton.bind(this)}>Submit</button>
           <p>{this.props.details.done}</p>
           {
             this.props.details.links.map(function (item, i) {
