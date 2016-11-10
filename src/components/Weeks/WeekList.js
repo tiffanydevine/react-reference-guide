@@ -42,3 +42,7 @@ export default class WeekList extends React.Component {
   }
 }; 
 
+// refer back to ideas.js I need to pass a function into Weeklist from layout. This funciton will 
+// take link and title arguements as well as week idea. I will then pass them as props up to layout in 
+// order to update the state. 
+
