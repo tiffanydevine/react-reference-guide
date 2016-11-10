@@ -1,16 +1,19 @@
 import React from "react"; 
-import Weeks from "./Weeks"
 
 export default class Input extends React.Component {
 
-onChange: function(syntheticEvent) {
-        // Log new `value` to JavaScript console
-        console.log(syntheticEvent.target.value)
+addLink(event) {
+		event.preventDefault(); 
+        console.log(this.refs.link.value)
     }
 
 render(){
 
 	return(
+		<form onSubmit={this.addLink.bind(this)}>
+			<input type='text' ref='link' />
+			<button type='submit'>Submit</button>
+		</form>
 
 		)
 }
