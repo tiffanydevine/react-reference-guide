@@ -3,19 +3,7 @@ import Weeks from "./Weeks"
 import Input from "./Input"
 
 export default class WeekList extends React.Component {
-  constructor(){
-    super(); 
-      this.state ={
-        completionStatus: "Click if finished"
-      }
-  }
 
-  handleButton(e){
-    const weekID = this.props.details.weekID
-    this.props.doneFunc(weekID); 
-  }
-
-  
 
   render() {
     //console.log(this.props.addLink('hi'))
@@ -23,7 +11,7 @@ export default class WeekList extends React.Component {
     return (
       <div>
         <ul>
-          <h3>{this.props.details.weektitle}</h3>
+          <h3 id="weekTitle">{this.props.details.weektitle}</h3>
             <Input addLink={this.props.addLink} weekID={this.props.details.weekID}/>
           <p>{this.props.details.done}</p>
           {
