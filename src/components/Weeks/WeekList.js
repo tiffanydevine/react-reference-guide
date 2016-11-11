@@ -15,19 +15,16 @@ export default class WeekList extends React.Component {
     this.props.doneFunc(weekID); 
   }
 
-  addLink(e) {
-        // Log new `value` to JavaScript console
-        console.log(e.target.value)
-  }
+  
 
   render() {
-    //console.log(this.props.details)
+    //console.log(this.props.addLink('hi'))
 
     return (
       <div>
         <ul>
           <h3>{this.props.details.weektitle}</h3>
-            <Input />
+            <Input addLink={this.props.addLink} weekID={this.props.details.weekID}/>
           <p>{this.props.details.done}</p>
           {
             this.props.details.links.map(function (item, i) {

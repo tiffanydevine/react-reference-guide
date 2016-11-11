@@ -169,6 +169,15 @@ export default class Layout extends React.Component {
       this.setState({[weekID]: temp})
     }
 
+    addLink(title, link, weekID){
+      console.log(title, link, weekID)
+      const temp = this.state[weekID]; 
+      temp.links.push({title, link})
+      this.setState({[weekID]: temp})
+    }
+
+
+
     render() {
 
         return (
@@ -177,10 +186,10 @@ export default class Layout extends React.Component {
 
             <Header />
             <div className='thing'>
-          		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)}/>
-              <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)}/>
-              <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)}/>
-              <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)}/>
+          		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
+              <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
+              <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
+              <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
         	 </div>
           </div>
           )

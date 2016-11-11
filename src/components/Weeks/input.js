@@ -2,23 +2,27 @@ import React from "react";
 
 export default class Input extends React.Component {
 
-addLink(event) {
+handleButton(event) {
 		event.preventDefault(); 
+		let weekID = this.props.weekID
 		let title = this.refs.title.value;
-		let link =  this.refs.title.value;
-        console.log(this.refs.link.value)
+		let link =  this.refs.link.value;
+        this.props.addLink(title, link, weekID); 
     }
 
 render(){
+	console.log(this.props.weekID)
 
 	return(
-		<form onSubmit={this.addLink.bind(this)}>
+		<form onSubmit={this.handleButton.bind(this)}>
 			<p>
-				Link Title: <input type='text' ref='link' />
+				<label>Link title</label>
+				<input className='block' type='text' ref='title' />
 				<button type='submit'>Submit</button>
 			</p>
 			<p>
-				Link: <input type='text' ref='link' />
+				<label>Link</label>
+				<input className='block' type='text' ref='link' />
 				<button type='submit'>Submit</button>
 			</p>
 		</form>
