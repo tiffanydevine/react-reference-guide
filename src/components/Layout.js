@@ -170,10 +170,13 @@ export default class Layout extends React.Component {
     }
 
     addLink(title, link, weekID){
-      console.log(title, link, weekID)
-      const temp = this.state[weekID]; 
-      temp.links.push({title, link})
-      this.setState({[weekID]: temp})
+      if (title === '' || link === '') {
+        console.log('Add information to both fields')
+      } else {
+        const temp = this.state[weekID]; 
+        temp.links.push({title, link})
+        this.setState({[weekID]: temp})
+      }
     }
 
 
