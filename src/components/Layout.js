@@ -1,6 +1,7 @@
 import React from "react"; 
 import Header from './Header';
 import WeekList from './Weeks/WeekList'
+import AddWeek from './AddWeek'
 
 export default class Layout extends React.Component {
     constructor(){
@@ -170,6 +171,10 @@ export default class Layout extends React.Component {
     }
 
     addLink(title, link, weekID){
+      /// this is going to give us the length (Object.keys(this.state).length)
+      // this is how i will generate the name: `weekNum${poo}`
+
+
       if (title === '' || link === '') {
         console.log('Add information to both fields')
       } else {
@@ -178,6 +183,8 @@ export default class Layout extends React.Component {
         this.setState({[weekID]: temp})
       }
     }
+
+    addWeek()
 
 
 
@@ -194,6 +201,9 @@ export default class Layout extends React.Component {
               <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
               <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
         	 </div>
+           <div> 
+              <AddWeek />
+           </div> 
           </div>
           )
     }

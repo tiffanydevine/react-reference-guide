@@ -18,19 +18,20 @@ render(){
 	return(
 		<form className="form-horizontal" onSubmit={this.handleButton.bind(this)}>
 			<div className="form-group">
-				<label className="col-sm-2 control-label">Link title</label>
+				<label className="col-sm-2 control-label">Description</label>
 					<div className="col-sm-10">
 						<input className="form-control" id="focusedInput" type="text" placeholder="Click to focus..." ref='title' />
 					</div>	
 			</div>
-			<p></p>
 			<div className="form-group">
 				<label  className="col-sm-2 control-label">Link</label>
 					<div className="col-sm-10">
 						<input className="form-control" id="focusedInput" type="text" placeholder="Click to focus..." ref='link' />
 					</div>
 			</div>
-			<button type='submit'>Submit</button>
+			<div> 
+				<button type='submit'>Submit</button>
+			</div> 
 		</form>
 
 		)
