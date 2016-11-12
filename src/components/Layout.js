@@ -2,6 +2,7 @@ import React from "react";
 import Header from './Header';
 import WeekList from './Weeks/WeekList'
 import AddWeek from './AddWeek'
+import GenerateWeeks from './Weeks/GenerateWeeks'
 
 export default class Layout extends React.Component {
     constructor(){
@@ -173,7 +174,8 @@ export default class Layout extends React.Component {
     addLink(title, link, weekID){
       /// this is going to give us the length (Object.keys(this.state).length)
       // this is how i will generate the name: `weekNum${poo}`
-
+      this.state.newThing = [1,2,3,4,5]
+      console.log(this.state)
 
       if (title === '' || link === '') {
         console.log('Add information to both fields')
@@ -183,9 +185,30 @@ export default class Layout extends React.Component {
         this.setState({[weekID]: temp})
       }
     }
+    
+    addWeek(description){
+      console.log(this.state)
+      let numWeeks = Object.keys(this.state).length + 1; 
+      let weekName = `weekNum${numWeeks}`; 
 
-    addWeek()
+      let temp = this.state
+      let title = `Week ${numWeeks}: ${description}`
+      temp[weekName] = {
+        weekID: weekName, 
+        weektitle: title, 
+        done:'',
+        links: [{}]
+      }
 
+      this.setState({[weekName]:{
+        weekID: weekName, 
+        weektitle: title, 
+        done:'',
+        links: []
+      }})   
+   
+    }
+  
 
 
     render() {
@@ -196,13 +219,10 @@ export default class Layout extends React.Component {
 
             <Header />
             <div className='thing'>
-          		<WeekList details={this.state.weekNum1} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
-              <WeekList details={this.state.weekNum2} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
-              <WeekList details={this.state.weekNum3} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
-              <WeekList details={this.state.weekNum4} doneFunc={this.doneFunc.bind(this)} addLink={this.addLink.bind(this)}/>
+              <GenerateWeeks details={this.state} addLink={this.addLink.bind(this)}/>
         	 </div>
            <div> 
-              <AddWeek />
+              <AddWeek addWeek={this.addWeek.bind(this)}/>
            </div> 
           </div>
           )

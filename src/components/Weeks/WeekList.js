@@ -6,21 +6,22 @@ export default class WeekList extends React.Component {
 
 
   render() {
-    //console.log(this.props.addLink('hi'))
+    let addLink = this.props.addLink
+    let details = this.props.details
+
 
     return (
       <div>
         <ul>
-          <h3 id="weekTitle">{this.props.details.weektitle}</h3>
-            <Input addLink={this.props.addLink} weekID={this.props.details.weekID}/>
-          <p>{this.props.details.done}</p>
-          {
-            this.props.details.links.map(function (item, i) {
-              return (
-                  <Weeks  key={i} weekItems={item}/>
-                )
-            })
-          } 
+          <h3 id="weekTitle">{details.weektitle}</h3>
+            <Input addLink={addLink} details={details}/>  
+              {
+                this.props.details.links.map(function(item, i){
+                  return (<Weeks key={i} weekItems={item} />)
+                })
+              }  
+                  
+                
        </ul>
       </div>
     );
