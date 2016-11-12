@@ -174,9 +174,7 @@ export default class Layout extends React.Component {
     addLink(title, link, weekID){
       /// this is going to give us the length (Object.keys(this.state).length)
       // this is how i will generate the name: `weekNum${poo}`
-      this.state.newThing = [1,2,3,4,5]
-      console.log(this.state)
-
+    
       if (title === '' || link === '') {
         console.log('Add information to both fields')
       } else {
