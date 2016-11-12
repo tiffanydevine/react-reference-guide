@@ -5,9 +5,11 @@ export default class Weeks extends React.Component {
   render() {
   	
     return 	(
-    	<div>
-	    	<h3 id="weekTitle">{this.props.weekItems.weektitle}</h3>
-	    	<li><a href={this.props.weekItems.link}>{this.props.weekItems.title}</a></li>
+    	<div> 
+	    	
+	    	<ul>	
+	    		<li><a href={this.props.weekItems.link}>{this.props.weekItems.title}</a></li>
+	    	</ul>
 	    </div>
 	    )
   }

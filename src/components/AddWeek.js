@@ -22,7 +22,7 @@ handleButton(event) {
 					</div>	
 			</div>
 			<div> 
-				<button type='submit'>Submit</button>
+				<button type='submit'>Add A New Week</button>
 			</div> 
 		</form>
 
